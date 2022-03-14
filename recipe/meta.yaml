@@ -24,7 +24,7 @@ requirements:
     - ftfy >=6.1
     - langcodes >=3.0
     - msgpack-python >=1.0
-    - mypy >=0.931
+    - mypy >=0.931,<0.932
     - python >=3.7
     - regex >=2020.04.04
 
