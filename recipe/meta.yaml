@@ -1,5 +1,5 @@
 {% set name = "wordfreq" %}
-{% set version = "3.0.1" %}
+{% set version = "3.0.2" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/wordfreq-{{ version }}.tar.gz
-  sha256: 31b033be79588ab79846397bc7df0e5a6d255458958a9fc8ec07424824059ea4
+  sha256: 104a1b975297317110f8d429d68c333cb828b7c7fad59fcae0b7615060d1d083
 
 build:
   number: 0
