@@ -7,11 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/wordfreq-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/wordfreq-{{ version }}.tar.gz
   sha256: 7943098975f25c2a70e1151ee5a62083b14a5f86f6cc5703cc9526f716ceb408
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -19,9 +19,9 @@ requirements:
   host:
     - pip
     - poetry-core >=1.0.0
-    - python >=3.8,<4
+    - python {{ python_min }}
   run:
-    - python >=3.8,<4
+    - python >={{ python_min }},<4
     - msgpack-python >=1.0.7,<2.0.0
     - langcodes >=3.0
     - regex >=2023.10.3
@@ -36,6 +36,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: http://github.com/LuminosoInsight/wordfreq/
